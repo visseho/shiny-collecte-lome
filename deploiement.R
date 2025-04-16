@@ -5,5 +5,4 @@ install.packages(c("shiny", "tidyverse", "lubridate"))
 
 rsconnect::deployApp('.')
 
-install.packages("remotes")
-remotes::install_github("larmarange/JLutils")
+
