@@ -34,10 +34,13 @@ ui <- fluidPage(
 server <- function(input, output) {
   data_file <- "data_collecte_vierge.csv"
   if (file.exists(data_file)) {
-    raw_data <- read_csv(data_file, show_col_types = FALSE)
-    raw_data <- raw_data %>%
-      mutate(date = as.Date(date),
-             taux_reponse = round(100 * menages_enquetes / menages_visites, 1))
+    raw_data <- read_csv(data_file, show_col_types = FALSE) %>%
+      mutate(
+        date = as.Date(date),
+        menages_enquetes = as.numeric(menages_enquetes),
+        menages_visites = as.numeric(menages_visites),
+        taux_reponse = round(100 * menages_enquetes / menages_visites, 1)
+      )
   } else {
     raw_data <- tibble(
       date = seq(from = as.Date("2025-04-10"), to = as.Date("2025-04-20"), by = "day"),

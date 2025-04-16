@@ -3,6 +3,6 @@ rsconnect::setAccountInfo(name='collectelome', token='3C7FDEA92D5C8A2DDFD957F461
 
 install.packages(c("shiny", "tidyverse", "lubridate"))
 
-rsconnect::deployApp('.')
+rsconnect::deployApp('~/Mon_Repo_Github/shiny-collecte-lome')
 
 

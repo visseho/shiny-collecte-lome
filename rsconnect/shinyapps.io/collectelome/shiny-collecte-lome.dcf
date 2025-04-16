@@ -1,0 +1,10 @@
+name: shiny-collecte-lome
+title:
+username: collectelome
+account: collectelome
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14533829
+bundleId: 10122039
+url: https://collectelome.shinyapps.io/shiny-collecte-lome/
+version: 1
